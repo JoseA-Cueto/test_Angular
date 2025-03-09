@@ -1,0 +1,14 @@
+<!-- src/app/task/task.component.html -->
+<div>
+    <h1>Gestor de Tareas</h1>
+    <input [(ngModel)]="taskInput" placeholder="Agregar tarea" />
+    <button (click)="addTask()">Agregar</button>
+  
+    <ul>
+      <li *ngFor="let task of tasks">
+        {{ task }}
+        <button (click)="removeTask(task)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  
